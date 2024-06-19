@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Zakat Maal</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="zakatmaal.html">Zakat Maal</a></li>
+            <li><a href="qurban.html">Qurban</a></li>
+            <li><a href="bantuan.html">Bantuan</a></li>
+        </ul>
+    </nav>
+
+    <!-- Zakat Maal Section -->
+    <section id="zakatMaal" class="container">
+        <h1>Hitung Zakat Maal</h1>
+        <p>Kalkulator Zakat Maal membantu Anda menghitung jumlah zakat yang harus dibayarkan berdasarkan jumlah harta yang dimiliki dan hutang yang jatuh tempo.</p>
+        <form id="zakatMaalForm" onsubmit="return false;">
+            <label for="totalAssets">Jumlah Harta (Rp):</label>
+            <input type="number" id="totalAssets" min="0" step="any" required>
+
+            <label for="totalDebts">Hutang Jatuh Tempo (Rp):</label>
+            <input type="number" id="totalDebts" min="0" step="any" required>
+
+            <label for="zakatPercentageMaal">Persentase Zakat Maal (%):</label>
+            <input type="number" id="zakatPercentageMaal" value="2.5" readonly>
+
+            <button type="button" onclick="calculateZakatMaal()">Hitung Zakat Maal</button>
+        </form>
+        <div id="resultMaal" class="result"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
